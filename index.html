@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V.O.F.F. SERVIÇOS LTDA</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Courier New", monospace;
+        background: #f7f1e3;
+        color: #2d2d2d;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #2d2d2d;
+        padding: 10px 25px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    header .logo {
+        color: #f7f1e3;
+        font-weight: bold;
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    header nav {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    header nav a {
+        color: #f7f1e3;
+        text-decoration: none;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        white-space: nowrap;
+    }
+
+    /* ===== BASE SECTIONS ===== */
+    section {
+        padding: 100px 60px;
+    }
+
+    h2.section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    .btn {
+        background: #f7f1e3;
+        color: #2d2d2d;
+        padding: 12px 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 3px;
+        font-weight: bold;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        height: 100vh;
+        background: url('https://images.unsplash.com/photo-1584384689201-e0bcbe2c7f1d?w=1600&auto=format&fit=crop&q=60') center/cover no-repeat;
+        position: relative;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 60px;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 10, 10, 0.6);
+    }
+
+    .hero-content {
+        position: relative;
+        max-width: 700px;
+        z-index: 2;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .about img {
+        width: 45%;
+        border-radius: 10px;
+    }
+
+    /* ===== GRID SECTIONS ===== */
+    .services, .advantages, .process {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .card {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-section {
+        height: 100vh;
+        background: #2d2d2d;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px;
+    }
+
+    .contact-form {
+        background: #3c3c3c;
+        padding: 30px;
+        border-radius: 8px;
+        width: 40%;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        background: #2d2d2d;
+        border: none;
+        color: white;
+        border-bottom: 2px solid #777;
+        font-family: inherit;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        background: #1a1a1a;
+        color: #d6d6d6;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+        header nav a {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .about {
+            flex-direction: column;
+        }
+        .about img {
+            width: 100%;
+        }
+
+        .services, .advantages, .process {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-section {
+            flex-direction: column;
+            height: auto;
+            gap: 40px;
+        }
+
+        .contact-form {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">V.O.F.F.</div>
+    <nav>
+        <a href="#hero">Início</a>
+        <a href="#about">Sobre</a>
+        <a href="#services">Serviços</a>
+        <a href="#advantages">Vantagens</a>
+        <a href="#process">Processo</a>
+        <a href="#contact">Contato</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-content">
+        <h1>V.O.F.F. SERVIÇOS LTDA</h1>
+        <p>Especialistas em gestão administrativa, gestão de projetos, consultoria empresarial e assessoria financeira. Oferecemos soluções personalizadas que combinam precisão analítica com visão estratégica para impulsionar o crescimento sustentável da sua empresa.</p>
+        <a href="#contact" class="btn">Contatos</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">Quem Somos</h2>
+    <div class="about">
+        <div>
+            <p>A V.O.F.F. SERVIÇOS LTDA nasceu com o objetivo de oferecer suporte sólido para empresas que buscam organização, clareza e planejamento eficiente. Nossa equipe atua com foco em resultados mensuráveis, desenvolvendo estratégias administrativas e financeiras que fortalecem a estrutura interna das organizações.</p>
+            <p>Acreditamos em processos transparentes, comunicação objetiva e soluções sob medida para cada cliente. Combinamos experiência prática e análise técnica para entregar projetos completos e consultoria eficiente em todas as etapas do negócio.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&auto=format&fit=crop&q=60">
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2 class="section-title">Nossos Serviços</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Gestão Administrativa</h3>
+            <p>Apoiamos empresas na estruturação de rotinas internas, padronização de processos e otimização do fluxo operacional. Nosso foco é aumentar eficiência e eliminar gargalos que dificultam o crescimento sustentável.</p>
+        </div>
+        <div class="card">
+            <h3>Gestão de Projetos</h3>
+            <p>Desenhamos, monitoramos e implementamos projetos corporativos com metodologias modernas, garantindo prazos, custos e qualidade. Acompanhamos cada etapa para assegurar resultados concretos.</p>
+        </div>
+        <div class="card">
+            <h3>Consultoria Financeira e Empresarial</h3>
+            <p>Oferecemos análises financeiras detalhadas, reestruturação de caixa e orientação estratégica para decisões de alto impacto. Nosso objetivo é fortalecer a saúde financeira e o posicionamento da empresa.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section id="advantages">
+    <h2 class="section-title">Por Que Trabalhar Conosco</h2>
+    <div class="advantages">
+        <div class="card">
+            <h3>Abordagem Personalizada</h3>
+            <p>Cada empresa possui necessidades e desafios próprios. Por isso, desenvolvemos soluções exclusivas adaptadas ao contexto e aos objetivos de cada cliente.</p>
+        </div>
+        <div class="card">
+            <h3>Precisão e Estratégia</h3>
+            <p>Combinamos análise técnica detalhada e visão estratégica para entregar diagnósticos claros e ações objetivas que aceleram resultados.</p>
+        </div>
+        <div class="card">
+            <h3>Transparência Total</h3>
+            <p>Trabalhamos com comunicação direta, relatórios completos e acompanhamento constante para garantir confiança e previsibilidade em cada etapa.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+    <h2 class="section-title">Como Trabalhamos</h2>
+    <div class="process">
+        <div class="card">
+            <h3>1. Análise Inicial</h3>
+            <p>Avaliamos a situação atual da empresa, identificamos pontos críticos e mapeamos necessidades essenciais.</p>
+        </div>
+        <div class="card">
+            <h3>2. Planejamento Estratégico</h3>
+            <p>Desenvolvemos um plano detalhado, com metas claras e ações estruturadas para cada área de atuação.</p>
+        </div>
+        <div class="card">
+            <h3>3. Implementação e Acompanhamento</h3>
+            <p>Executamos o projeto ou consultoria e monitoramos resultados, ajustando o processo para garantir máxima eficiência.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+    <div style="width:50%;">
+        <h2 style="font-size:32px; margin-bottom:20px;">Entre em Contato</h2>
+        <p>Entre em contato conosco através do e-mail abaixo. Estamos prontos para ajudar sua empresa a crescer com clareza, estratégia e soluções práticas.</p>
+        <p>Acreditamos que cada comunicação inicia uma oportunidade de transformação e melhoria.</p>
+
+        <p><strong>Email:</strong> inbox@voffservicos.biz</p>
+        <p><strong>Endereço:</strong> Rua Olimpia 364 APT 103, 85869-310 Foz do Iguaçu</p>
+    </div>
+
+    <div class="contact-form">
+        <h3>Formulário de Contato</h3>
+        <input type="text" placeholder="Seu nome">
+        <input type="email" placeholder="Seu e-mail">
+        <textarea rows="4" placeholder="Sua mensagem"></textarea>
+        <button class="btn" style="width:100%; text-align:center;">Enviar</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 V.O.F.F. SERVIÇOS LTDA — Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
